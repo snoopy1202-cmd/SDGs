@@ -36,6 +36,14 @@
             color: #7f8c8d;
             font-size: 16px;
             margin-top: 0;
+            margin-bottom: 20px;
+        }
+        .project-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            margin: 15px 0;
         }
         h2 {
             color: #d35400;
@@ -118,10 +126,11 @@
     <header>
         <h1>SDG 7 可負擔的永續能源</h1>
         <p class="subtitle">專題作品提案：基於 micro:bit 之智慧微型電網與追光防擾系統</p>
+        <img class="project-img" src="https://raw.githubusercontent.com/snoopy1202-cmd/SDGs/main/7BCD18A9-9271-4EB0-8ECF-A6C2256CD073.png" alt="SDGs Project Image">
     </header>
 
     <section>
-        <h2>一、 核心核心意象與作品名稱</h2>
+        <h2>一、 核心意象與作品名稱</h2>
         <p>本作品圍繞聯合國永續發展目標 <strong>SDG 7（可負擔的永續能源）</strong>，旨在解決太陽能發電「看天吃飯（間歇性）」、空間效率與現實環境干擾等核心痛點。以下為作品推薦名稱，可依展出性質選擇：</p>
         <ul>
             <li><strong>科技與設計感（首選）：</strong>【逐光計畫】（Project Helios）或【光能行者】</li>
@@ -221,7 +230,7 @@
         <ol>
             <li><strong>夜間車燈與手電筒惡意干擾：</strong>
                 <br><em>問題：</em> 晚上有人拿手電筒亂照，會導致馬達誤判有太陽而盲轉，白白浪費儲能電池的電力。
-                <br><em>解方：</em> 透過程式設定<strong>「時間鎖」</strong>（或長時平均光值判斷）。若無長時間穩定大面積日照，系統判定為短暫人為干擾，鎖定馬達不予執行追光。
+                <br><em>解方：</em> 透過程式設定<strong>「時間鎖」</strong>。若無長時間穩定大面積日照，系統判定為短暫人為干擾，鎖定馬達不予執行追光。
             </li>
             <li><strong>環境落葉與鳥屎遮蔽：</strong>
                 <br><em>問題：</em> 太陽能板若部分被髒污遮蔽，發電效率會暴跌。
