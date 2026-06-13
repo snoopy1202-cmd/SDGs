@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 7 永續能源：智慧微型電網與追光系統實作計畫書</title>
+    <style>
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        header {
+            text-align: center;
+            border-bottom: 3px solid #f39c12;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        .subtitle {
+            color: #7f8c8d;
+            font-size: 16px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #d35400;
+            border-left: 5px solid #f39c12;
+            padding-left: 12px;
+            margin-top: 35px;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+        h3 {
+            color: #2c3e50;
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        p, li {
+            font-size: 15px;
+            color: #555555;
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 15px;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 12px;
+        }
+        th {
+            background-color: #f9e79f;
+            color: #2c3e50;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #fcf8e3;
+        }
+        .highlight-box {
+            background-color: #ebf5fb;
+            border-left: 5px solid #3498db;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            font-weight: 500;
+            color: #2c3e50;
+        }
+        .code-block {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 6px;
+            font-family: Consolas, Monaco, monospace;
+            font-size: 14px;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 5px;
+            padding-top: 20px;
+            border-top: 1px solid #eeeeee;
+            color: #bdc3c7;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>SDG 7 可負擔的永續能源</h1>
+        <p class="subtitle">專題作品提案：基於 micro:bit 之智慧微型電網與追光防擾系統</p>
+    </header>
+
+    <section>
+        <h2>一、 核心核心意象與作品名稱</h2>
+        <p>本作品圍繞聯合國永續發展目標 <strong>SDG 7（可負擔的永續能源）</strong>，旨在解決太陽能發電「看天吃飯（間歇性）」、空間效率與現實環境干擾等核心痛點。以下為作品推薦名稱，可依展出性質選擇：</p>
+        <ul>
+            <li><strong>科技與設計感（首選）：</strong>【逐光計畫】（Project Helios）或【光能行者】</li>
+            <li><strong>思辨與研究型：</strong>【破曉：太陽能的現實與未來解方】或【光與地的拉扯】</li>
+            <li><strong>感性與敘事型：</strong>【晴天限定的備忘錄】（趣味呼應看天吃飯之痛點）</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>二、 系統設計與 3,000 元預算清單</h2>
+        <p>本計畫在預算新台幣 3,000 元內具備極高可行性，實際所需材料經優化後僅需約 1,300 至 1,600 元，整體架構安全、好組裝且適合科展或生活科技課程展示。</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>零件名稱</th>
+                    <th>主要功能與教學模擬說明</th>
+                    <th>估計金額 (台幣)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>micro:bit V2 主板</strong></td>
+                    <td>系統核心大腦，負責運算邏輯、光源讀取與馬達控制。</td>
+                    <td>約 700 - 800 元</td>
+                </tr>
+                <tr>
+                    <td><strong>micro:bit 多功能擴充板</strong></td>
+                    <td>方便外接伺服馬達、光敏電阻及 LED 模組（如 Robotbit 或網能板）。</td>
+                    <td>約 300 - 400 元</td>
+                </tr>
+                <tr>
+                    <td><strong>5V 微型太陽能滴膠板</strong></td>
+                    <td>採集光線。室內展示可以利用桌面檯燈或手電筒模擬陽光。</td>
+                    <td>約 50 - 80 元</td>
+                </tr>
+                <tr>
+                    <td><strong>SG90 伺服馬達</strong></td>
+                    <td>帶動太陽能板進行旋轉，實現「向日葵式」的智慧追光系統。</td>
+                    <td>約 50 元</td>
+                </tr>
+                <tr>
+                    <td><strong>光敏電阻模組 (2入)</strong></td>
+                    <td>作為系統的眼睛，分別裝在面板左、右側以辨識光源方位。</td>
+                    <td>約 40 - 60 元</td>
+                </tr>
+                <tr>
+                    <td><strong>18650 電池與專用電池座</strong></td>
+                    <td>模擬「儲能系統」，白天將電能存入，夜間無光時釋放。</td>
+                    <td>約 150 元</td>
+                </tr>
+                <tr>
+                    <td><strong>5V 低電壓 LED 燈模組</strong></td>
+                    <td>模擬受微電網調度控制的智慧城市路燈或家用電器。</td>
+                    <td>約 30 - 50 元</td>
+                </tr>
+                <tr>
+                    <td><strong>材料線材與外殼配件</strong></td>
+                    <td>杜邦線、鱷魚夾，以及用於製作「未來永續小屋」模型的廢紙板。</td>
+                    <td>約 50 元</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>三、 核心運作邏輯（無陽光時之解決方案）</h2>
+        <p>當面臨<strong>「沒有太陽（夜間或連續陰雨天）」</strong>的困境時，本作品透過 micro:bit 編寫智慧調度邏輯，區分三種情境模式運作：</p>
+        
+        <h3>1. 模式一：陽光充足（儲能模式）</h3>
+        <ul>
+            <li><strong>觸發條件：</strong>光敏電阻讀取值為強光（例如 &gt; 150）。</li>
+            <li><strong>系統動作：</strong>智慧追光馬達啟動，對準光源以極大化發電效率；同時，微電網關閉路燈，將產出的電力全數存入 18650 電池中。micro:bit 螢幕顯示充電動畫。</li>
+        </ul>
+
+        <h3>2. 模式二：夜間／無陽光（儲能供電模式）</h3>
+        <ul>
+            <li><strong>觸發條件：</strong>光敏電阻讀取值為弱光（例如 &lt; 50），且儲能電池電量充足。</li>
+            <li><strong>系統動作：</strong>馬達停止轉動並回到預設正中央（避免耗電），微電網自動切換開關由電池放電，點亮微型城鎮的 LED 路燈。micro:bit 螢幕顯示「🔋」標誌。</li>
+        </ul>
+
+        <h3>3. 模式三：連續陰雨天（智慧限電／需量反應模式）</h3>
+        <ul>
+            <li><strong>觸發條件：</strong>長時間無陽光，且儲能電池電量過低。</li>
+            <li><strong>系統動作：</strong>micro:bit 發出蜂鳴器警報，執行「需量反應調度」，強制將 LED 路燈亮度減半（或關閉非核心用電），將剩餘微弱電力留給核心控制系統，示範智慧節能。</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>四、 進階思維：人為干擾與環境防錯設計（Anti-interference）</h2>
+        <p>現實中的太陽能電網會遇到各種不確定因素。在專題中加入以下防錯邏輯，能大幅提升作品的完整度與工程師思維：</p>
+        
+        <div class="highlight-box">
+            <p>💡 工程師思維提示：一個好的作品不只要會動，更要具備「防錯」與「容錯」機制！</p>
+        </div>
+
+        <ol>
+            <li><strong>夜間車燈與手電筒惡意干擾：</strong>
+                <br><em>問題：</em> 晚上有人拿手電筒亂照，會導致馬達誤判有太陽而盲轉，白白浪費儲能電池的電力。
+                <br><em>解方：</em> 透過程式設定<strong>「時間鎖」</strong>（或長時平均光值判斷）。若無長時間穩定大面積日照，系統判定為短暫人為干擾，鎖定馬達不予執行追光。
+            </li>
+            <li><strong>環境落葉與鳥屎遮蔽：</strong>
+                <br><em>問題：</em> 太陽能板若部分被髒污遮蔽，發電效率會暴跌。
+                <br><em>解方：</em> 在程式中設定，若光敏電阻顯示大太陽、馬達已對準，但量測到的充電電壓異常低落時，micro:bit 螢幕跳出「⚠️ NEED CLEAN」警告，提醒管理員派員清理。
+            </li>
+            <li><strong>馬達機構卡死保護：</strong>
+                <br><em>問題：</em> 展覽時常有觀眾伸手強行推擠面板，或是有異物卡住齒輪，容易導致伺服馬達過熱燒毀。
+                <br><em>解方：</em> <strong>電流／時間過載保護</strong>。若 micro:bit 發出旋轉指令超過 5 秒，但光敏電阻的相對差值完全沒有改變（代表面板沒動），系統應立即切斷馬達電源並顯示錯誤碼「ERR」，避免硬體損壞。
+            </li>
+            <li><strong>都市建築與樹蔭短暫陰影：</strong>
+                <br><em>問題：</em> 雲朵飄過或路人經過時的短暫陰影，會使馬達頻繁在原地來回抽動、消耗不必要的能源。
+                <br><em>解方：</em> 設置<strong>延時微調（Delay Loop）</strong>。設定每 10 或 15 分鐘才進行一次光源掃描與角度微調（因為太陽移動速度極慢），靜態期間馬達完全斷電鎖定。
+            </li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>五、 MakeCode 邏輯核心偽代碼（程式參考）</h2>
+        <div class="code-block">
+當開機時:
+    設定 伺服馬達 角度為 90 度
+    顯示字串 "SDG 7 READY"
+
+重複無限次:
+    左光值 = 讀取 類比 pin 1
+    右光值 = 讀取 類比 pin 2
+    環境平均光值 = (左光值 + 右光值) / 2
+
+    如果 環境平均光值 > 150 則:
+        // 白天追光與儲能
+        顯示圖案 (太陽)
+        設定 智慧路燈 輸出為 0 %
+        如果 (左光值 - 右光值) > 20 且 馬達角度 > 0 則:
+            馬達角度 = 馬達角度 - 5
+        如果 (右光值 - 左光值) > 20 且 馬達角度 < 180 則:
+            馬達角度 = 馬達角度 + 5
+        控制 伺服馬達 移動至 馬達角度
+    否則如果 環境平均光值 < 50 則:
+        // 夜間儲能供電
+        顯示圖案 (電池)
+        馬達角度 = 90 // 歸位節能
+        控制 伺服馬達 移動至 馬達角度
+        如果 備用電池電量 > 安全值 則:
+            設定 智慧路燈 輸出為 100 %
+        否則:
+            設定 智慧路燈 輸出為 30 % // 需量反應節能
+            鳴叫 蜂鳴器 警告
+    
+    暫停 2000 毫秒 // 避免馬達過度抽動
+        </div>
+    </section>
+
+    <div class="footer">
+        本資料符合 SDG 7 永續能源指標規範 | micro:bit 科技專題應用實作指南
+    </div>
+</div>
+
+</body>
+</html>
